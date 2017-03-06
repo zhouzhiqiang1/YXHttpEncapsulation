@@ -1,6 +1,6 @@
 //
-//  YXHttpClientDomeTests.m
-//  YXHttpClientDomeTests
+//  YXHttpEncapsulationTests.m
+//  YXHttpEncapsulationTests
 //
 //  Created by R_zhou on 2017/3/6.
 //  Copyright © 2017年 R_zhou. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface YXHttpClientDomeTests : XCTestCase
+@interface YXHttpEncapsulationTests : XCTestCase
 
 @end
 
-@implementation YXHttpClientDomeTests
+@implementation YXHttpEncapsulationTests
 
 - (void)setUp {
     [super setUp];
