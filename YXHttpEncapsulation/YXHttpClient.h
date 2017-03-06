@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFSecurityPolicy.h"
 
 typedef NS_OPTIONS(NSInteger, YXHttpType) {
     YXHttpTypeGet = 0,
@@ -66,7 +65,6 @@ typedef NS_OPTIONS(NSInteger, YXCachePolicy) {
 @property (weak, nonatomic) id<YXHttpClientDataSource> dataSource;
 @property (weak, nonatomic) id<YXHttpCacheDataSource> cacheDataSource;
 @property (strong, nonatomic) NSString *baseUrl;
-@property (strong, nonatomic) AFSecurityPolicy *securityPolicy;
 
 
 + (instancetype)sharedClient;

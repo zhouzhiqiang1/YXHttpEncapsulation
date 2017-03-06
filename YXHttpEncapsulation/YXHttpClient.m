@@ -8,9 +8,11 @@
 
 #import "YXHttpClient.h"
 #import "AFHTTPSessionManager.h"
+#import "AFSecurityPolicy.h"
 
 @interface YXHttpClient()
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
+@property (strong, nonatomic) AFSecurityPolicy *securityPolicy;
 @end
 @implementation YXHttpClient
 + (instancetype)sharedClient
