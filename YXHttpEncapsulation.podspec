@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/zhouzhiqiang1/YXHttpEncapsulation.git", :tag => s.version }
 
-  s.source_files  = "YXHttpClient/*.{h,m}"
+  s.source_files  = "YXHttpEncapsulation/*.{h,m}"
 
   s.requires_arc = true
   s.dependency 'AFNetworking','~>3.1.0'
