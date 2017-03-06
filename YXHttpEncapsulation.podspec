@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://guides.cocoapods.org/making/private-cocoapods.html"
 
-  s.ios.deployment_target = '8.0'
+  s.platform     = :ios, '8.0'
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
 
@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
   
   s.requires_arc = true
   
-  s.dependency 'AFNetworking','~>3.1.0'
+  s.dependency "AFNetworking","~>3.1.0"
 end
