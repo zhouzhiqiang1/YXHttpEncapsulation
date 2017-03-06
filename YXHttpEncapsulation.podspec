@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "YDHttpClient"
+  s.name         = "YXHttpEncapsulation"
 
   s.version      = "0.0.1"
 
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.summary      = "Http Client"
+  s.summary      = "Http Encapsulation"
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
 
