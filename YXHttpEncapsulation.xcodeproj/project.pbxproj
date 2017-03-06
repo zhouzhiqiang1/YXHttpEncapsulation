@@ -16,7 +16,7 @@
 		DD1B13021E6D47F200051018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1B13001E6D47F200051018 /* LaunchScreen.storyboard */; };
 		DD1B130D1E6D47F200051018 /* YXHttpEncapsulationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B130C1E6D47F200051018 /* YXHttpEncapsulationTests.m */; };
 		DD1B13181E6D47F200051018 /* YXHttpEncapsulationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B13171E6D47F200051018 /* YXHttpEncapsulationUITests.m */; };
-		DD1B13281E6D496A00051018 /* YXHttpEncapsulation.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B13271E6D496A00051018 /* YXHttpEncapsulation.m */; };
+		DD1B132B1E6D4C1100051018 /* YXHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B132A1E6D4C1100051018 /* YXHttpClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 		DD1B13131E6D47F200051018 /* YXHttpEncapsulationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YXHttpEncapsulationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1B13171E6D47F200051018 /* YXHttpEncapsulationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXHttpEncapsulationUITests.m; sourceTree = "<group>"; };
 		DD1B13191E6D47F200051018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD1B13261E6D496A00051018 /* YXHttpEncapsulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXHttpEncapsulation.h; path = YXHttpClient/YXHttpEncapsulation.h; sourceTree = "<group>"; };
-		DD1B13271E6D496A00051018 /* YXHttpEncapsulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXHttpEncapsulation.m; path = YXHttpClient/YXHttpEncapsulation.m; sourceTree = "<group>"; };
+		DD1B13291E6D4C1100051018 /* YXHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXHttpClient.h; path = YXHttpClient/YXHttpClient.h; sourceTree = "<group>"; };
+		DD1B132A1E6D4C1100051018 /* YXHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXHttpClient.m; path = YXHttpClient/YXHttpClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +171,8 @@
 		DD1B13251E6D494E00051018 /* YXHttpClient */ = {
 			isa = PBXGroup;
 			children = (
-				DD1B13261E6D496A00051018 /* YXHttpEncapsulation.h */,
-				DD1B13271E6D496A00051018 /* YXHttpEncapsulation.m */,
+				DD1B13291E6D4C1100051018 /* YXHttpClient.h */,
+				DD1B132A1E6D4C1100051018 /* YXHttpClient.m */,
 			);
 			name = YXHttpClient;
 			sourceTree = "<group>";
@@ -362,9 +362,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD1B12FA1E6D47F200051018 /* ViewController.m in Sources */,
+				DD1B132B1E6D4C1100051018 /* YXHttpClient.m in Sources */,
 				DD1B12F71E6D47F200051018 /* AppDelegate.m in Sources */,
 				DD1B12F41E6D47F200051018 /* main.m in Sources */,
-				DD1B13281E6D496A00051018 /* YXHttpEncapsulation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

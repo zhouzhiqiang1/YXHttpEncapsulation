@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 
   s.homepage      = 'https://guides.cocoapods.org/making/private-cocoapods.html'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.summary      = "Http Encapsulation"
 
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.source_files  = "YXHttpClient/*.{h,m}"
 
   s.requires_arc = true
-  
+
   s.dependency 'AFNetworking','~>3.1.0'
 
 end
