@@ -3,8 +3,12 @@ Pod::Spec.new do |s|
   s.name         = "YXHttpEncapsulation"
 
   s.version      = "0.0.1"
+
+  s.summary      = "all kinds of categories for iOS develop"
   
-  s.summary      = "A short description of Storyboard."
+  s.description  = <<-DESC
+                      this project provide all kinds of categories for iOS developer 
+                   DESC
 
   s.homepage     = "https://guides.cocoapods.org/making/private-cocoapods.html"
 
