@@ -19,4 +19,6 @@ Pod::Spec.new do |s|
   s.source_files  = "YXHttpClient/*.{h,m}"
   
   s.requires_arc = true
+  
+  s.dependency 'AFNetworking','~>3.1.0'
 end
