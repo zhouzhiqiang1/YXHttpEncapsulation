@@ -85,7 +85,24 @@
     if (aPoclicy == YXCachePolicyNoCache) {
         [self addCustomHeaderForUrl:anUrl];
         if (aMethod == YXHttpTypeGet) {
-            NSURLSessionDataTask *task = [self.sessionManager GET:anUrl parameters:aParam success:^(NSURLSessionDataTask * task, id responseObject) {
+//            NSURLSessionDataTask *task = [self.sessionManager GET:anUrl parameters:aParam success:^(NSURLSessionDataTask * task, id responseObject) {
+//                if (aSuccess) {
+//                    if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
+//                        id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
+//                        aSuccess(task, newResponse);
+//                    } else {
+//                        aSuccess(task, responseObject);
+//                    }
+//                    [self setCache:responseObject forUrl:anUrl param:aParam];
+//                }
+//            } failure:^(NSURLSessionDataTask * task, NSError * error) {
+//                if (aFailure) {
+//                    aFailure(task, error);
+//                }
+//            }];
+            NSURLSessionDataTask *task = [self.sessionManager GET:anUrl parameters:aParam progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (aSuccess) {
                     if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
                         id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
@@ -95,14 +112,32 @@
                     }
                     [self setCache:responseObject forUrl:anUrl param:aParam];
                 }
-            } failure:^(NSURLSessionDataTask * task, NSError * error) {
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (aFailure) {
                     aFailure(task, error);
                 }
             }];
+            
             return task;
         } else if (aMethod == YXHttpTypePost) {
-            NSURLSessionDataTask *task = [self.sessionManager POST:anUrl parameters:aParam success:^(NSURLSessionDataTask * task, id responseObject) {
+//            NSURLSessionDataTask *task = [self.sessionManager POST:anUrl parameters:aParam success:^(NSURLSessionDataTask * task, id responseObject) {
+//                if (aSuccess) {
+//                    if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
+//                        id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
+//                        aSuccess(task, newResponse);
+//                    } else {
+//                        aSuccess(task, responseObject);
+//                    }
+//                    [self setCache:responseObject forUrl:anUrl param:aParam];
+//                }
+//            } failure:^(NSURLSessionDataTask * task, NSError * error) {
+//                if (aFailure) {
+//                    aFailure(task, error);
+//                }
+//            }];
+            NSURLSessionDataTask *task = [self.sessionManager POST:anUrl parameters:aParam progress:^(NSProgress * _Nonnull uploadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (aSuccess) {
                     if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
                         id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
@@ -112,7 +147,7 @@
                     }
                     [self setCache:responseObject forUrl:anUrl param:aParam];
                 }
-            } failure:^(NSURLSessionDataTask * task, NSError * error) {
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (aFailure) {
                     aFailure(task, error);
                 }
@@ -199,7 +234,23 @@
     } else {
         [self addCustomHeaderForUrl:anUrl];
         if (aMethod == YXHttpTypeGet) {
-            NSURLSessionDataTask *task = [self.sessionManager GET:anUrl parameters:aParam success:^(NSURLSessionDataTask * task, id responseObject) {
+//            NSURLSessionDataTask *task = [self.sessionManager GET:anUrl parameters:aParam success:^(NSURLSessionDataTask * task, id responseObject) {
+//                if (aSuccess) {
+//                    if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
+//                        id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
+//                        aSuccess(task, newResponse);
+//                    } else {
+//                        aSuccess(task, responseObject);
+//                    }
+//                }
+//            } failure:^(NSURLSessionDataTask * task, NSError * error) {
+//                if (aFailure) {
+//                    aFailure(task, error);
+//                }
+//            }];
+            NSURLSessionDataTask *task = [self.sessionManager GET:anUrl parameters:aParam progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (aSuccess) {
                     if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
                         id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
@@ -208,27 +259,44 @@
                         aSuccess(task, responseObject);
                     }
                 }
-            } failure:^(NSURLSessionDataTask * task, NSError * error) {
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (aFailure) {
                     aFailure(task, error);
                 }
             }];
             return task;
         } else if (aMethod == YXHttpTypePost) {
-            NSURLSessionDataTask *task = [self.sessionManager POST:anUrl parameters:aParam success:^(NSURLSessionDataTask * task, id responseObject) {
-                if (aSuccess) {
-                    if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
-                        id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
-                        aSuccess(task, newResponse);
-                    } else {
-                        aSuccess(task, responseObject);
-                    }
-                }
-            } failure:^(NSURLSessionDataTask * task, NSError * error) {
-                if (aFailure) {
-                    aFailure(task, error);
-                }
-            }];
+//            NSURLSessionDataTask *task = [self.sessionManager POST:anUrl parameters:aParam success:^(NSURLSessionDataTask * task, id responseObject) {
+//                if (aSuccess) {
+//                    if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
+//                        id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
+//                        aSuccess(task, newResponse);
+//                    } else {
+//                        aSuccess(task, responseObject);
+//                    }
+//                }
+//            } failure:^(NSURLSessionDataTask * task, NSError * error) {
+//                if (aFailure) {
+//                    aFailure(task, error);
+//                }
+//            }];
+            
+             NSURLSessionDataTask *task = [self.sessionManager POST:anUrl parameters:aParam progress:^(NSProgress * _Nonnull uploadProgress) {
+                 
+             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                 if (aSuccess) {
+                     if ([self.dataSource respondsToSelector:@selector(httpClient:customResponseFromOriginal:)]) {
+                         id newResponse = [self.dataSource httpClient:self customResponseFromOriginal:responseObject];
+                         aSuccess(task, newResponse);
+                     } else {
+                         aSuccess(task, responseObject);
+                     }
+                 }
+             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                 if (aFailure) {
+                     aFailure(task, error);
+                 }
+             }];
             return task;
         }
         return nil;
