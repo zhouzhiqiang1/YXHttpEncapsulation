@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.author       = { "zhouzhiqiang1" => "zhou83955@sina.com" }
 
-  s.source       = { :git => "https://github.com/zhouzhiqiang1/YXHttpEncapsulation.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/zhouzhiqiang1/YXHttpEncapsulation.git", :tag => "0.0.1" }
 
   s.source_files  = "YXHttpClient/*.{h,m}"
   
