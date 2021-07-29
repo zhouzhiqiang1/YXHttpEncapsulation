@@ -9,6 +9,42 @@ http请求基本上每一个app都会使用，基与AFNetworking进行好的封�
 #### 依赖  AFNetworking 3.1.0
   pod 'YXHttpEncapsulation'
   
+### 例子
+### Header
+```objective-c
+
+#import "YXHttpClient.h"
+
+//请求超时时长
+[[YXHttpClient sharedClient] setTimeoutInterval:10];
+//dataSource  YXHttpClientDataSource
+[[YXHttpClient sharedClient] setDataSource:self];
+
+#pragma mark - YXHttpClient DataSource
+- (NSDictionary *)httpClient:(YXHttpClient *)aClient customHeaderForUrl:(NSString *)anUrl
+{
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    [dict setObject:@"0.0.1" forKey:@"version"];
+    [dict setObject:@"IOS_APP" forKey:@"terminal"];
+    //...
+    return dict;
+}
+
+``` 
+### http 请求
+```objective-c
+NSDictionary *param = @{
+    @"vid":@(1001),
+    @"title":@"123"
+};
+                
+[[YXHttpClient sharedClient] performRequestWithUrl:@"url" httpMethod:@"YXHttpTypePost / YXHttpTypeGet" param:param success:^(NSURLSessionDataTask *task, id responseObject) {
+   NSLog(@"请求成功处理~~~~~~%@",responseObject);
+} failure:^(NSURLSessionDataTask *task, NSError *error) {
+   NSLog(@"报错处理");
+}];
+``` 
+
 ### 枚举
 ```objective-c
  typedef NS_OPTIONS(NSInteger, YXHttpType) {
