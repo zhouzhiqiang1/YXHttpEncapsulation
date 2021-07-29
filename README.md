@@ -118,4 +118,4 @@ typedef NS_OPTIONS(NSInteger, YXCachePolicy) {
                                           completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))aCompletionHandler;
 ```
 
-然后你就可以愉快的开发了
+然后你就可以愉快的网络请求开发了
